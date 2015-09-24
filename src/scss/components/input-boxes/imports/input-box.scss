@@ -1,0 +1,13 @@
+@import '../../../settings/element-color-palette.scss';
+@import '../../../settings/text-color-palette.scss';
+@import '../../../settings/decoration-settings.scss';
+
+input {
+    position:           absolute;
+    background-color:   transparent;
+    color:              $input-text;
+    border:             none;
+    border-bottom:      $input-border;
+    width:              100%;
+
+}

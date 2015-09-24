@@ -1,0 +1,15 @@
+@import '../../../settings/element-color-palette.scss';
+@import '../../../settings/text-color-palette.scss';
+@import '../../../settings/decoration-settings.scss';
+@import '../../../settings/transition-settings.scss';
+
+label {
+    position:       absolute;
+    top:            5px;
+    padding:        0;
+    margin:         0;
+    color:          $grey-text;
+    transition:     $transition-all;
+
+}
+

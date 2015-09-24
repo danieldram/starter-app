@@ -6012,6 +6012,37 @@ button.close {
 
 /* GENERAL SETTINGS */
 body {
-  background-color: #333; }
+  background-color: #121212; }
+
+* {
+  outline: none; }
 
 /* SHIFT AUDIO UI COMPONENTS*/
+.sha_general_input_box input {
+  position: absolute;
+  background-color: transparent;
+  color: #6ed5fe;
+  border: none;
+  border-bottom: 1px solid #656565;
+  width: 100%; }
+
+.sha_general_input_box label {
+  position: absolute;
+  top: 5px;
+  padding: 0;
+  margin: 0;
+  color: #656565;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s; }
+
+.sha_general_input_box input:focus + label {
+  transform-orign: 0, 0;
+  -webkit-transform: translateY(-20px) scale(0.8);
+      -ms-transform: translateY(-20px) scale(0.8);
+          transform: translateY(-20px) scale(0.8); }
+
+.sha_workspaceArea {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #303030;
+  height: 650px; }

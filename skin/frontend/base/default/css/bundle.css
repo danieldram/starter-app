@@ -8372,7 +8372,14 @@ body {
 }
 
 .sha_general_input_box input:focus + label {
-  transform-orign: 0, 0;
+  transform-orign: left;
+  -webkit-transform: translateY(-20px) scale(0.8);
+  -ms-transform: translateY(-20px) scale(0.8);
+  transform: translateY(-20px) scale(0.8);
+}
+
+.sha_general_input_box input:valid + label {
+  transform-orign: left;
   -webkit-transform: translateY(-20px) scale(0.8);
   -ms-transform: translateY(-20px) scale(0.8);
   transform: translateY(-20px) scale(0.8);

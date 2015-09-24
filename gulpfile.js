@@ -183,8 +183,8 @@ function startBrowserSync(){
     }
 
     gulp.watch(config.sassDir,['styles', 'css']);
-    gulp.watch("./src/scss/**/**/*.scss", ['css']);
-    gulp.watch("./src/scss/components/*.scss", ['css']);
+    gulp.watch("./src/**/*.scss", ['css']);
+    gulp.watch("./src/scss/components/**/*.scss", ['css']);
     gulp.watch("./src/*.ts", ['js']);
     gulp.watch("./src/**/*.ts", ['js']);
 

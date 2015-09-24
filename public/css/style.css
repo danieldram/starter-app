@@ -6012,6 +6012,31 @@ button.close {
 
 /* GENERAL SETTINGS */
 body {
-  background-color: #333; }
+  background-color: #121212; }
+
+* {
+  outline: none; }
 
 /* SHIFT AUDIO UI COMPONENTS*/
+.sha_general_input_box input {
+  position: absolute;
+  background-color: transparent;
+  color: #6ed5fe;
+  border: none;
+  border-bottom: 1px solid #656565; }
+
+.sha_general_input_box label {
+  position: absolute;
+  top: 5px;
+  color: #656565;
+  -webkit-transition: all 1s;
+          transition: all 1s; }
+
+.sha_general_input_box input:focus, .sha_general_input_box label {
+  color: blue; }
+
+.sha_workspaceArea {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #303030;
+  height: 650px; }
