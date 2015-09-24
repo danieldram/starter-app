@@ -1,1 +1,13 @@
-@import 'bootstrap.scss';
+/* VENDORS */
+@import 'vendor/bootstrap.scss';
+
+
+/* GENERAL SETTINGS */
+@import 'settings/settings.scss';
+
+
+/* SHIFT AUDIO UI COMPONENTS*/
+@import 'components/input-boxes/general-input-box.scss';
+
+
+
