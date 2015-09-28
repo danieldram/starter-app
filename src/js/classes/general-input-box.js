@@ -1,7 +1,7 @@
 "use strict";
 var inherit         = require('inherit-prototypes');
 var Debug           = require('./debug');
-var WatchElement    = require('./watch-element');
+var WatchElement    = require('../watchers/input-watcher');
 
 class classes {};
 inherit(classes, [Debug, WatchElement]);
@@ -10,6 +10,7 @@ class GeneralInputBox extends classes {
   constructor({debugMode, id}){
       super();
       this._debugMode = debugMode;
+      this._model = null;
       this._inputBox = document.getElementById(id);
 
       if(this._debugMode)
@@ -31,8 +32,13 @@ class GeneralInputBox extends classes {
   }
 
   changed(changes){
+
+    console.log({input:this});
     console.log(changes);
   }
+
+
+
 }
 
 

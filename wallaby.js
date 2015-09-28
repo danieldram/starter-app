@@ -12,7 +12,6 @@ module.exports = function (wallaby) {
 
   return {
     files: [
-      { pattern: 'public/index.html', load: false},
       { pattern: 'src/**/*.js', load: false},
     ],
 
