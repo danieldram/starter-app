@@ -1,31 +1,24 @@
-var gulp        = require('gulp');
-var $           = require('gulp-load-plugins')({lazy:true});
-var config      = require('./gulpconfig')();
-var del         = require('del');
-var wiredep     = require('wiredep').stream;
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var concatCss   = require("gulp-concat-css");
-var runSeq      = require('run-sequence');
-var autoprefixer    = require('gulp-autoprefixer');
+var gulp              = require('gulp');
+var $                 = require('gulp-load-plugins')({lazy:true});
+var config            = require('./gulpconfig')();
+var del               = require('del');
+var wiredep           = require('wiredep').stream;
+var browserSync       = require('browser-sync');
+var sass              = require('gulp-sass');
+var concatCss         = require("gulp-concat-css");
+var runSeq            = require('run-sequence');
+var autoprefixer      = require('gulp-autoprefixer');
+var babelify          = require('babelify');
 
 // Browserify
-//var watchify = require('watchify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-
-
-
-
 var port = process.env.PORT || config.defaultPort;
-
-var args = require('yargs').argv;
-
 
 
 gulp.task('js', function(){
-   return   browserify('./src/app.ts', {debug:true})
-            .plugin('tsify', { noImplicitAny: true })
+   return   browserify('./src/js/app.js', {debug:true})
+            .transform(babelify)
             .bundle()
             .pipe(source('bundle.js'))
             .pipe(gulp.dest('./public/assets/js'));
@@ -185,8 +178,8 @@ function startBrowserSync(){
     gulp.watch(config.sassDir,['styles', 'css']);
     gulp.watch("./src/**/*.scss", ['css']);
     gulp.watch("./src/scss/components/**/*.scss", ['css']);
-    gulp.watch("./src/*.ts", ['js']);
-    gulp.watch("./src/**/*.ts", ['js']);
+    gulp.watch("./src/*.js", ['js']);
+    gulp.watch("./src/**/*.js", ['js']);
 
     var options ={
         proxy: 'localhost:' + port,
@@ -217,4 +210,3 @@ function startBrowserSync(){
 
     browserSync(options);
 }
-
