@@ -15,10 +15,7 @@ describe('General Input Boxes', function () {
       jasmine.getFixtures().fixturesPath = 'public/';
       loadFixtures('index.html');
       expect($('#username')).not.toHaveText(/hello/)
-      // var username = new GeneralInputBox( {debugMode: false, id:'username'});
-      // console.log(username);
-      // expect(username.element).equals(true);
-      //
+
 
   });
 
