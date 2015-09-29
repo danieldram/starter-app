@@ -33,7 +33,7 @@ class GeneralInputBox extends classes {
 
   changed(changes){
 
-    console.log({input:this});
+    console.log(this.value);
     console.log(changes);
   }
 

@@ -1,14 +1,24 @@
-var chai = require('chai');
-var expect = chai.expect;
+//var chai            = require('chai');
+//var expect          = chai.expect;
+var $               = require('jquery');
+var j               = require('jasmine');
+var $j              = require('jasmine-jquery');
+
+
 var GeneralInputBox = require('../src/js/classes/general-input-box');
 
 
 describe('General Input Boxes', function () {
 
   it('should construct the class by selecting the element', function(){
-      var username = new GeneralInputBox( {debugMode: false, id:'username'});
-      console.log(username);
-      expect(username.element).equals(true);
+
+      jasmine.getFixtures().fixturesPath = 'public/';
+      loadFixtures('index.html');
+      expect($('#username')).not.toHaveText(/hello/)
+      // var username = new GeneralInputBox( {debugMode: false, id:'username'});
+      // console.log(username);
+      // expect(username.element).equals(true);
+      //
 
   });
 

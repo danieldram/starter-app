@@ -48,6 +48,8 @@
     "foundation": "^4.2.1",
     "gulp": "^3.9.0",
     "inherit-prototypes": "^0.1.1",
+    "jasmine": "^2.3.2",
+    "jasmine-jquery": "^2.1.1",
     "jquery": "^2.1.4",
     "mongodb": "^2.0.34",
     "mongoose": "^4.0.5",
