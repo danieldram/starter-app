@@ -63,7 +63,7 @@ gulp.task('component-styles',['main-styles'], function(){
 });
 
 gulp.task('css', function(callback){
-    runSeq('bundle-css', 'copy-styles', callback);
+    runSeq('bundle-css', callback);
 });
 
 
@@ -75,14 +75,6 @@ gulp.task("bundle-css", ['main-styles'], function(){
         .pipe(gulp.dest("./public/assets/css"));
 
 });
-
-gulp.task('copy-styles', function(){
-   return gulp
-       .src('./public/assets/css/bundle.css')
-       .pipe(gulp.dest('./skin/frontend/base/default/css'));
-
-});
-
 
 
 gulp.task('clean-styles', function(callback){

@@ -17,7 +17,7 @@ module.exports = function (wallaby) {
     ],
 
     tests: [
-      {pattern: 'tests/test.js', load: false}
+      {pattern: 'tests/**/*.js', load: false}
     ],
     postprocessor: wallabyPostprocessor,
 

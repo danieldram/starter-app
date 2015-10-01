@@ -1,4 +1,5 @@
 
-var GeneralInputBox = require ('./classes/general-input-box');
+var Xyz = require ('./classes/xyz');
 
-var username = new GeneralInputBox({debugMode:true, id:'username'});
+var xyz = new Xyz();
+xyz.test();
